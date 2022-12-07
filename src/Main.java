@@ -69,7 +69,9 @@ public class Main {
         System.out.println("\nЗадача_5:");
 
         for (int y = 1904; y <= 2096; y = y + 4) {
-            System.out.println(y + " год является високосным.");
+            if (y % 4 == 0 || y % 400 == 0 && y % 100 != 0) {
+                System.out.println(y + " год является високосным.");
+            }
         }
     }
 
@@ -113,7 +115,7 @@ public class Main {
         int year = 12;
         int money = 0;
         for (int month = 1; month <= year; month++) {
-              money = money + 29000;
+              money += 29000;
                 System.out.println("Месяц " + month + ", сумма накоплений равна " + money + " рублей" );
             }
         }
